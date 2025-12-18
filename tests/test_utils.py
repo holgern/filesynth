@@ -265,10 +265,10 @@ class TestGenerateFolderStructure:
         """Test depth 2 returns nested folders."""
         folders = generate_folder_structure(2, 2)
         assert len(folders) == 4
-        assert "folder_01/folder_01" in folders
-        assert "folder_01/folder_02" in folders
-        assert "folder_02/folder_01" in folders
-        assert "folder_02/folder_02" in folders
+        assert os.path.join("folder_01", "folder_01") in folders
+        assert os.path.join("folder_01", "folder_02") in folders
+        assert os.path.join("folder_02", "folder_01") in folders
+        assert os.path.join("folder_02", "folder_02") in folders
 
     def test_depth_three(self):
         """Test depth 3 returns deeply nested folders."""
