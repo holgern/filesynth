@@ -2,10 +2,11 @@
 
 Generate synthetic test files for cloud upload testing and benchmarking.
 
-
 ## Overview
 
-**filesynth** is a powerful CLI tool designed to create random binary test files with configurable sizes, folder structures, and content patterns. Perfect for benchmarking and testing cloud storage tools, backup solutions, and data transfer applications.
+**filesynth** is a powerful CLI tool designed to create random binary test files with
+configurable sizes, folder structures, and content patterns. Perfect for benchmarking
+and testing cloud storage tools, backup solutions, and data transfer applications.
 
 ### Key Features
 
@@ -73,7 +74,8 @@ filesynth clean -m testdata_manifest.json --all
 
 ### Cloud Upload Testing Workflow
 
-This is the primary use case - testing cloud upload/download and verifying file integrity:
+This is the primary use case - testing cloud upload/download and verifying file
+integrity:
 
 ```bash
 # 1. Generate test files with manifest
@@ -94,7 +96,8 @@ filesynth validate -m upload_test_manifest.json -o downloaded_test
 
 ### Multiple Test Datasets
 
-The manifest is automatically named to match the output directory, allowing multiple datasets:
+The manifest is automatically named to match the output directory, allowing multiple
+datasets:
 
 ```bash
 # Create multiple test datasets
@@ -208,6 +211,7 @@ Options:
 ```
 
 **Exit Codes:**
+
 - `0` - All validations passed
 - `1` - Files missing
 - `2` - Checksum mismatch
@@ -416,5 +420,6 @@ Holger Nahrstaedt (nahrstaedt@gmail.com)
 ## Acknowledgments
 
 Built with:
+
 - [Click](https://click.palletsprojects.com/) - Command-line interface framework
 - [Rich](https://rich.readthedocs.io/) - Beautiful terminal output
